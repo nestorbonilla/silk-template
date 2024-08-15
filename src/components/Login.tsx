@@ -29,7 +29,6 @@ export default function Login() {
       });
       setWalletClient(newWalletClient);
       setConnected(true);
-      // Request addresses after successful login
       const [address] = await newWalletClient.requestAddresses();
       setUserAddress(address);
     } catch (err: any) {
@@ -39,7 +38,6 @@ export default function Login() {
   
   async function logout(e: React.MouseEvent) {
     e.preventDefault();
-    // @ts-ignore
     setConnected(false);
     setWalletClient(undefined);
     setUserAddress("");
