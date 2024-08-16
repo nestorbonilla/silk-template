@@ -5,7 +5,7 @@ function PersonalSign() {
   const { connected, walletClient, userAddress } = useWallet();
 
   const [isSigning, setIsSigning] = useState(false);
-  const [signature, setSignature] = useState<string | null>(null); 
+  const [signature, setSignature] = useState<string | null>(null);
 
   const handleSignMessage = async () => {
     if (!connected || !walletClient) return; 
